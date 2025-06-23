@@ -94,11 +94,10 @@ with st.sidebar:
         </div>
     """, unsafe_allow_html=True)
 
-#Disable this for free deployment
-#if "access_token" not in st.session_state:
-#    st.warning("🔑 Please log in to access features.")
-#    st.stop()
-st.success("Public demo mode enabled (authentication disabled)")
+Disable this for free deployment
+if "access_token" not in st.session_state:
+    st.warning("🔑 Please log in to access features.")
+    st.stop()
 
 @st.cache_resource
 def get_spark_session():
